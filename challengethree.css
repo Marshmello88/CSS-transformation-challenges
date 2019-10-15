@@ -1,0 +1,12 @@
+/*When hovered, move a div with a class of element on X axis by 100% in 1 second. Apply transitions.*/
+
+.element {
+    width: 100px;
+    height: 100px;
+    background-color: #bada55;
+    transition: transform 1s ease-in-out;
+}
+
+.element:hover {
+	transform: translateX(100%);
+}

@@ -1,0 +1,15 @@
+/*Use the rotate function to spin an image infinitely. The image should rotate without any breaks and stops. Don't forget to give your animation a name! In the hint tab, you'll find a link to boilerplate files to help get you started.*/
+
+img {
+    animation: spinning 4s infinite linear;
+}
+
+@keyframes spinning {
+    from { 
+       transform: rotate(0deg); 
+    }
+    
+    to {
+        transform: rotate(359deg);
+    }
+}
