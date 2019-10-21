@@ -1,0 +1,60 @@
+.navDefault {
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    background-color: #4a4a4f;
+}
+
+button {
+    border: none;
+    background-color: #0997d3;
+    width: 150px;
+    height: 50px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.dropdownMenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px;
+    z-index: -1; /* this way this will always be lower than other elements, otherwise stacked ontop */
+    width: 150px;
+    box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.2);
+    text-align: center;
+    transform: translateY(-100%); /*by default it will be set off the screen; hidden */
+    transition: transform .5s ease-in-out; /* hovering over the dropdown menu, the list appears smoothly */
+}
+
+.dropdownLink {
+    text-decoration: none;
+    display: block;
+    background-color: #f9f9f9;
+    color: #4a4a4f;
+    padding: 10px 5px;
+    transition: background-color .5s ease-in-out, color .5s ease-in-out; /* softer transition when you hover over tje item */
+}
+
+.dropdownLink:hover {
+    color: #fff;
+    background-color:#a0a0a3;
+}
+
+.dropdown {
+    width: 150px;
+    position: relative; /* to the fixed position of the button */
+}
+
+.dropdown:hover button {
+    background-color: #018ec5; /*the dropdown button itself becomes slighty lighter as to indicate that the mouse is hovering over it */
+}
+
+.dropdown:hover .dropdownMenu {
+    transform: translateY(0%);
+}
